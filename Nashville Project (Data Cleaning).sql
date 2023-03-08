@@ -1,7 +1,7 @@
 SELECT TOP (100) *
 FROM Housing
 ------------------------------------------------------------------------------------------------
--- Standardizing the data format
+-- Standardizing the data format by converting into "date" type
 
 SELECT SaleDate, CONVERT(Date,SaleDate)
 FROM Housing
@@ -60,7 +60,7 @@ FROM Housing
 WHERE PropertyAddress IS NULL
 
 ------------------------------------------------------------------------------------------------
--- Breaking out the address into individual columns (Address, City, State)
+-- Breaking out the address into individual columns (Address, City, State) rather than keeping it all in one cell
 SELECT PropertyAddress
 FROM Housing
 
